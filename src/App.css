@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+button{
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  background:  #537FE7;
+  padding: 12px 10px;
+  cursor: pointer;
+}
+button:hover{
+  transition: 200ms;
+  scale:1.03;
+  background-color: #6892f5;
+}
+
+
+.box{
+  background-color: rgb(255, 255, 255);
+  color:#537FE7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: .7rem 5%;
+  margin: 0 auto;
+  border-radius: .3rem
+}
+
+.box2{
+  width: 90%;
+  margin: 0 auto;  
+}
+
+.avatar{
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.column-3{
+  float: left;
+  width: 33%;
+}
+
+.profile {
+  border: 1.5px initial rgb(250, 173, 205);
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  max-width: 300px;
+  margin: 20px 50px;
+  text-align: center;
+  font-family: arial;
+  padding: 20px;
+  background-color: #537FE7;
+  border-radius: .4rem;
+}
+
+.profile:hover{
+  transition:400ms;
+  box-shadow: 0 8px 16px 0 #537FE7;
+  transform: translateY(-10px);
+}
+.email {
+  color: rgb(222, 222, 222);
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+.name{
+  font-size:25px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.loader{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loadingAnimation {
+  margin: auto;
+  border-radius: 50%;
+  border-top: 20px solid #537FE7;
+  width: 100px;
+  height: 100px;
+  animation: spinner .3s linear infinite;
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 600px) {
+  .profile{
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .name{
+    font-size:medium;
+  }
+  .column-3{
+    float: left;
+    margin-left: 60px;
+  }
+
+  .email{
+    font-size: small;
+  }
+
+  .loader{
+    align-self: center;
+    width:100%;
+  }
+
+  .box{
+    width:110vh;
+  }
+  
+}
